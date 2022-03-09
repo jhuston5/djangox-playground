@@ -1,0 +1,11 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<h2>Drill Details: {{ drill.description }}</h2>
+<h2>Soldier: {{ drill.soldier }}</h2>
+<p>{{ drill.drill_date }}</p>
+<a href="{% url 'drill_update' drill.pk %}">+ Update Drill</a>
+<a href="{% url 'drill_delete' drill.pk %}">+ Delete Drill</a>
+<a href="{% url 'drill_list' %}">Return To Drill List</a>
+{% endblock content %}
