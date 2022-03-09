@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     # Local
     'accounts',
     'pages',
+    'drills',
 ]
 
 # MIDDLEWARE
@@ -171,3 +172,5 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL = 'accounts.CustomUser'
