@@ -15,3 +15,13 @@ class Drill(models.Model):
 
   def get_absolute_url(self):
     return reverse('drill_detail', args=[str(self.id)])
+
+
+class PDF(models.Model):
+  name = models.CharField(max_length=64)
+  file = models.FileField()
+
+  def __str__(self):
+        """String for representing the MyModelName object (in Admin site etc.)."""
+        return self.name
+
