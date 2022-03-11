@@ -1,9 +1,10 @@
 # Create your views here.
+from re import template
 from django.shortcuts import render
 
 # Create your views here.
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from .models import Drill
+from .models import Drill, PDF 
 from django.urls import reverse_lazy
 
 
@@ -30,3 +31,8 @@ class DrillDeleteView(DeleteView):
   template_name = "drill_delete.html"
   model = Drill
   success_url = reverse_lazy('drill_list')
+
+class DrillUploadView(CreateView):
+  template_name = "drill_upload.html"
+  model = PDF
+  fields = ['name', 'file']
